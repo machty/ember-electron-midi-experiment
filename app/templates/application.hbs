@@ -1,0 +1,18 @@
+<p>
+  <input type="range"
+         min="30"
+         max="200"
+         value={{speed}}
+         oninput={{action (mut speed) value="target.value"}} /> {{speed}}
+</p>
+
+{{#play-button task=makeNoise}}Make Noise{{/play-button}}
+{{#play-button task=glissandoUp}}Glissando Up{{/play-button}}
+{{#play-button task=glissandoDown}}Glissando Down{{/play-button}}
+{{#play-button task=sinWave}}Sin Wave{{/play-button}}
+{{#play-button task=playMelody}}Funky Town{{/play-button}}
+
+{{#if noteIndicator.isRunning}}
+  <div class="note-indicator"></div>
+{{/if}}
+
